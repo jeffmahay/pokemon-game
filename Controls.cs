@@ -14,13 +14,14 @@ class Controls: PokeDex
         {
             key = 1;
         }
-        else if(IsKeyDown("d") == true)
+        else if(IsKeyDown("j") == true)
         {
             key = 2;
         }
         return key;
     }
 
+// CURRENTLY UNUSED //
     public IStats getDefender(Dictionary<IStats, int> pkmList)
     {
         MissingNo missingNo = new MissingNo();
