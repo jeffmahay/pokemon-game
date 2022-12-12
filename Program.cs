@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Linq;
 
-class Program : Pokemon
+class Program : GUI
 {
     static void Main()
     {
@@ -17,10 +17,11 @@ class Program : Pokemon
         cast.addList(hitmonlee);
         cast.addList(hitmontop);
 
-        foreach(KeyValuePair<IStats, int> i in cast.sortList())
-        {
-            Console.WriteLine($"Name:{i.Key.Name()}");
-            Console.WriteLine($"Speed:{i.Key.Speed()}");
-        }
+        cast.addEnemyList(hitmonchan);
+        cast.addEnemyList(hitmontop);
+
+        cast.addPlayerList(hitmonlee);
+
+        gui.generateWindow(cast.GetEnemyDic());
     }
 }
